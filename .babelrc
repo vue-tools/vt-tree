@@ -1,0 +1,13 @@
+{
+  "plugins": [
+    "transform-vue-jsx",
+    "transform-runtime"
+  ],
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": ["last 7 versions", "safari >= 7"]
+      }
+    }]
+  ]
+}

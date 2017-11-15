@@ -1,0 +1,33 @@
+{
+  "name": "vt-tree",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vue-tools/vt-tree"
+  },
+  "main": "dist/index.vue",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vue-tools/vt-tree/issues"
+  },
+  "homepage": "https://github.com/vue-tools/vt-tree#readme",
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-helper-vue-jsx-merge-props": "^2.0.2",
+    "babel-plugin-istanbul": "^4.0.0",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-plugin-transform-vue-jsx": "^3.3.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-runtime": "^6.23.0",
+    "chai": "^3.5.0",
+    "codecov": "^1.0.1",
+    "cross-env": "^3.1.4"
+  },
+  "scripts": {
+    "prepublish": "npm run copy && node_modules/.bin/babel dist -d dist",
+    "copy": "rm -rf dist && cp -rf src dist"
+  },
+  "dependencies": {}
+}
