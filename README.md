@@ -1,9 +1,6 @@
-# datetime-picker
-移动端时间日期控件  
-
-![日期](https://raw.githubusercontent.com/vue-tools/vt-datetime-picker/c5f5ae73a6f3216239b12df5a3b520005ee962ce/img/date.png)
-![时间](https://raw.githubusercontent.com/vue-tools/vt-datetime-picker/master/img/time.png)
-
+# vt-tree
+树形多选组件
+ 
 # Use 
 ```shell
 $ npm install vt-tree -s
