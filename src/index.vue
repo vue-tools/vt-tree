@@ -1,16 +1,17 @@
+<style src="./style.css"></style>
 <template>
     <ul>
         <li v-for="item in data">
             <div :class="{bold: isFolder(item),'tree__item--noChild':!isFolder(item)}">
                 <span class="tree__opened--status" v-if="isFolder(item)" @click="toggle(item)">[{{item.opened ? '-' : '+'}}]</span>
                 <label @dblclick="toggle(item)">
-                    <input v-if="checkbox" class="tree__checkbox" type="checkbox" v-model="item.checked" @change="checkdChange(item)" @click.stop>
+                    <input v-if="checkbox" class="tree__checkbox" type="checkbox" v-model="item[checkedField]" @change="checkdChange(item)" @click.stop @dblclick.stop>
                     {{item[textField]}}
                 </label>
             </div>
             <ul v-if="isFolder(item)" v-show="item.opened">
                 <tree class="item" :textField="textField" :childrenField="childrenField" :checkbox="checkbox"
-                      :model="item[childrenField]"></tree>
+                      :data="item[childrenField]"></tree>
             </ul>
         </li>
     </ul>
@@ -35,6 +36,10 @@
             checkbox: {
                 type: Boolean,
                 default: false
+            },
+            checkedField:{
+                type: String,
+                default: 'checked'
             },
             cascadeCheck: {
                 type: Boolean,
@@ -76,7 +81,7 @@
                 }
             },
             getCheckedNodes(){
-                return getChecked(this.childrenField)
+                return getChecked(this.data,this.childrenField)
             }
         }
     }
