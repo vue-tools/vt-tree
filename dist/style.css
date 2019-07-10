@@ -1,0 +1,26 @@
+.item {
+    cursor: pointer;
+}
+
+.bold {
+    font-weight: bold;
+}
+ul {
+    padding-left: 1em;
+    line-height: 1.5em;
+    list-style-type: dot;
+}
+.tree__item--noChild {
+    padding-left: 16px;
+}
+.tree__checkbox {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: -1px;
+    margin: 0;
+}
+.tree__opened--status {
+    width: 17px;
+    display: inline-block;
+}
